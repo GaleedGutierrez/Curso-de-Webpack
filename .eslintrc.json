@@ -123,7 +123,7 @@
 		"func-call-spacing": ["error", "never"],
 		"quote-props": ["error", "consistent-as-needed"],
 		"brace-style": "error",
-		"no-console": ["error", { "allow": ["warn", "error"] }], // Opcional
+		"no-console": ["warn", { "allow": ["warn", "error"] }], // Opcional
 		// "space-in-brackets": ["error", "always"],
 		"@typescript-eslint/type-annotation-spacing": "error",
 		"@typescript-eslint/no-non-null-assertion": "warn",
