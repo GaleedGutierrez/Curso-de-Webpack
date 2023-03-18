@@ -1,0 +1,33 @@
+{
+  "name": "js-portfolio",
+  "version": "1.0.0",
+  "description": "A minimal portfolio with Vanilla JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gndx/js-portfolio.git"
+  },
+  "keywords": [
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "oscar barajas <oscar@gndx.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gndx/js-portfolio/issues"
+  },
+  "homepage": "https://github.com/gndx/js-portfolio#readme",
+  "devDependencies": {
+    "@babel/core": "7.21.3",
+    "@babel/plugin-transform-runtime": "7.21.0",
+    "@babel/preset-env": "7.20.2",
+    "babel-loader": "9.1.2",
+    "eslint": "8.36.0",
+    "webpack": "5.76.2",
+    "webpack-cli": "5.0.1"
+  }
+}
