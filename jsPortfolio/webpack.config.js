@@ -25,6 +25,11 @@ const rulesCSS = {
 	]
 };
 
+const rulesAssets = {
+	test : /\.png$/,
+	type : 'asset/resource'
+};
+
 const plugins = [
 	new HtmlWebpackPlugin({
 		inject   : true,
@@ -49,7 +54,8 @@ module.exports = {
 	module : {
 		rules : [
 			rulesJavascript,
-			rulesCSS
+			rulesCSS,
+			rulesAssets,
 		]
 	},
 	plugins
