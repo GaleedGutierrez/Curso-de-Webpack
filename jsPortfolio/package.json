@@ -4,8 +4,8 @@
   "description": "A minimal portfolio with Vanilla JavaScript",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode=production",
-    "dev": "webpack --config webpack.config.dev.js"
+    "build": "webpack --mode=production --config=webpack.config.js",
+    "dev": "webpack --config=webpack.config.dev.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "@babel/preset-env": "7.20.2",
     "@types/webpack": "5.28.1",
     "babel-loader": "9.1.2",
+    "clean-webpack-plugin": "4.0.0",
     "copy-webpack-plugin": "11.0.0",
     "css-loader": "6.7.3",
     "dotenv-webpack": "8.0.1",
