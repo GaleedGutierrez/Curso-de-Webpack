@@ -11,6 +11,16 @@ const output = {
 	assetModuleFilename : 'assets/images/[hash][ext][query]'
 };
 
+const resolve = {
+	extensions : ['.js'],
+	alias      : {
+		'@utils'     : path.resolve(__dirname, 'src/utils/'),
+		'@templates' : path.resolve(__dirname, 'src/templates/'),
+		'@styles'    : path.resolve(__dirname, 'src/styles/'),
+		'@images'    : path.resolve(__dirname, 'src/assets/images/'),
+	}
+};
+
 const rulesJavascript = {
 	test    : /\.m?js$/,
 	exclude : /node_modules/,
@@ -83,11 +93,9 @@ const optimization = {
 };
 
 module.exports = {
-	entry   : './src/index.js',
+	entry  : './src/index.js',
 	output,
-	resolve : {
-		extensions : ['.js']
-	},
+	resolve,
 	module : {
 		rules : [
 			rulesJavascript,
