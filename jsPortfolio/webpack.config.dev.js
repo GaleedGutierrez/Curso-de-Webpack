@@ -74,6 +74,7 @@ module.exports = {
 	output,
 	resolve,
 	mode    : 'development',
+	watch   : true,
 	devtool : 'inline-source-map',
 	module  : {
 		rules : [
