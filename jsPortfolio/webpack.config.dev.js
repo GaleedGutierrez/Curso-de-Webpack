@@ -69,12 +69,19 @@ const plugins = [
 	new Dotenv()
 ];
 
+const devServer = {
+	static             : path.join(__dirname, 'dist'),
+	compress           : true,
+	historyApiFallback : true,
+	port               : 3006,
+};
+
 module.exports = {
 	entry   : './src/index.js',
 	output,
 	resolve,
 	mode    : 'development',
-	watch   : true,
+	// watch   : true,
 	devtool : 'inline-source-map',
 	module  : {
 		rules : [
@@ -85,4 +92,5 @@ module.exports = {
 		]
 	},
 	plugins,
+	devServer
 };
