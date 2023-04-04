@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer');
+
 
 const output = {
 	path                : path.resolve(__dirname, 'dist'),
@@ -66,7 +68,8 @@ const plugins = [
 			to   : 'assets/images'
 		}]
 	}),
-	new Dotenv()
+	new Dotenv(),
+	new BundleAnalyzerPlugin()
 ];
 
 const devServer = {
