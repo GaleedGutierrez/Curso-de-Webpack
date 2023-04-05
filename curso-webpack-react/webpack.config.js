@@ -10,15 +10,14 @@ const output = {
 	filename   : 'bundle.js',
 	publicPath : '/',
 };
+const alias = {
+	'@components' : path.resolve(__dirname, 'src/components/'),
+	'@styles'     : path.resolve(__dirname, 'src/styles/')
+};
 
 const resolve = {
 	extensions : [ '.js', '.jsx' ],
 	alias
-};
-
-const alias = {
-	'@components' : path.resolve(__dirname, 'src/components/'),
-	'@styles'     : path.resolve(__dirname, 'src/styles/')
 };
 
 const rulesForJavaScript = {
