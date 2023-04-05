@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 
 const output = {
@@ -85,7 +85,8 @@ module.exports = {
 	resolve,
 	mode    : 'development',
 	// watch   : true,
-	devtool : 'inline-source-map',
+	devtool : 'source-map',
+	// devtool : 'inline-source-map',
 	module  : {
 		rules : [
 			rulesJavascript,
