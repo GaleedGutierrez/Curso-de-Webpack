@@ -1,5 +1,5 @@
 const path = require('path');
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const output = {
 	path     : path.resolve(__dirname, 'dist'),
@@ -10,15 +10,20 @@ const resolve = {
 	extensions : [ '.js', '.jsx' ]
 };
 
-const rules = [
-	{
-		test    : /\.(js|jsx)$/,
-		exclude : /node_modules/,
-		use     : {
-			loader : 'babel-loader'
-		}
+const rulesForJavaScript = {
+	test    : /\.(js|jsx)$/,
+	exclude : /node_modules/,
+	use     : {
+		loader : 'babel-loader'
 	}
-];
+};
+
+const rulesForHtml = {
+	test : /\.html$/,
+	use  : {
+		loader : 'html-loader'
+	}
+};
 
 const devServer = {
 	static   : path.join(__dirname, 'dist'),
@@ -26,12 +31,23 @@ const devServer = {
 	port     : 3006
 };
 
+const plugins = [
+	new HtmlWebpackPlugin({
+		template : './public/index.html',
+		filename : './index.html'
+	})
+];
+
 module.exports = {
 	entry  : './src/index.js',
 	output,
 	resolve,
 	module : {
-		rules
+		rules : [
+			rulesForJavaScript,
+			rulesForHtml
+		]
 	},
-	devServer
+	devServer,
+	plugins
 };
